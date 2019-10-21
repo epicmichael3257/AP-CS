@@ -45,7 +45,7 @@ public class Main1
                     list3[position]=list[array1];
                     position++;
                     array1++;  
-                    
+                    inArray1 = false;
                 }
                 for(int r=0;r<position;r++){ //loop to current position in list, see if list2[array] is in merged or not
                     if(list3[r]==list2[array2]){ 
@@ -58,7 +58,7 @@ public class Main1
                     list3[position]=list2[array2];
                     position++; 
                     array2++;
-                
+                    inArray2 = false;
                 }  
         }
        

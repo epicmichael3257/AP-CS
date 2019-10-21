@@ -10,7 +10,6 @@ public class Main1
         int position=0;
         int array1 = 0;
         int array2 =0;
-        int flag = -1;
         while(length<10){
             System.out.println("Enter an array length (must be 10 or greater):");
             length = s.nextInt();       

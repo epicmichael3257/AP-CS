@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class Main
+{   
+    
+    
+    public static double numberScramble(double num){
+        if(num<0){
+            System.out.println(0.0);
+            return 0.0;
+        }
+        
+        num = (num+5)/2;
+        num = Math.sqrt(num);
+        System.out.println("The scrambled number is: "+num);
+        return num;
+    
+    }
+    public static boolean isEdhesivePalindrome(String str){
+        boolean pali = true;
+       
+        if (str.length() <=3 || str.length() >= 15)
+			return false;
+		
+        String bob = str.toLowerCase();
+                        bob = bob.replace('4', 'a');
+			bob = bob.replace('3', 'e');
+			bob = bob.replace('0', 'o');
+
+        
+        for(int i=0;i<str.length()/2;i++){
+            
+            if(bob.charAt(i)!=bob.charAt(-i+bob.length()-1)){
+                    pali = false;
+                    System.out.println("Too bad, that isn't an Edhesive Palindrome.");
+                    return pali;
+            }
+            
+        }
+        System.out.println("Nice, you found an Edhesive Palindrome!");
+        return pali;
+        
+    }
+    public static String duplicate(String str){
+        if(str.length()%2==1){
+            String odd = "";
+            for(int i=0; i<str.length();i++){
+                
+                for(int j=0; j<str.length();j++){
+                    odd += str.charAt(i);
+                    
+                }
+            }
+            System.out.println("The duplicated String is: "+odd);
+            return odd;
+            
+            
+        }
+        
+            String even = "";
+        for(int i=0;i<str.length();i++){
+            for(int j=0; j<str.length()*2;j++){
+                
+                even +=str.charAt(i);
+            }
+            
+            
+            
+        }
+        System.out.println("The duplicated String is: "+even);
+        return even;
+        
+    }
+    
+    
+    
+    
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+       System.out.println("Welcome to the Methods Sampler Platter. Please enter a String to duplicate.");
+       String a = scan.nextLine();
+       duplicate(a);
+       System.out.println("Next, please enter a String to check for Edhesive Palindromes.");
+       String b= scan.nextLine();
+       isEdhesivePalindrome(b);
+       System.out.println("Almost done! Please enter a number to scramble.");
+       double c = scan.nextDouble();
+       numberScramble(c);
+       
+    }
+}

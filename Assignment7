@@ -10,8 +10,9 @@ public class Main
         }
         
         num = (num+5)/2;
-        num = Math.sqrt(num);
-        System.out.println("The scrambled number is: "+num);
+        num = Math.sqrt(num);       
+
+       
         return num;
     
     }
@@ -84,7 +85,6 @@ public class Main
        isEdhesivePalindrome(b);
        System.out.println("Almost done! Please enter a number to scramble.");
        double c = scan.nextDouble();
-       numberScramble(c);
-       
+        System.out.println("The scrambled number is: "+numberScramble(c));
     }
 }

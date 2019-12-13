@@ -54,7 +54,7 @@ public class Hangman
         boolean letterFound = false;
         boolean repeat = false;
         
-        int a = (int)(Math.random()*18);
+        int a = (int)(Math.random()*words.size);
         String letterGuess = "";
         String blankWord = "";
         String guessedLetters = "";
